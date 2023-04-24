@@ -1,10 +1,15 @@
+//features.scss is the template, which we can use in different styles folder by importing
+
+//color template
 $color2: rgb(255, 255, 255);
 $color3: rgb(51, 51, 51);
 $color4: #e7e7e7;
 
+//text and shadow template
 $text1: "Quicksand", sans-serif;
 $shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
+// template defaultstyle
 @mixin defaultStyle {
   width: 100%;
   height: 100vh;
@@ -12,6 +17,7 @@ $shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   background-color: $color4;
 }
 
+// template styledText
 @mixin styledText(
   $size: 1.2rem,
   $weight: 400,
@@ -26,6 +32,7 @@ $shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   color: $color;
 }
 
+// template flexBox
 @mixin flexBox(
   $direction: row,
   $alignItems: center,
@@ -39,11 +46,13 @@ $shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   gap: $spacing;
 }
 
+//// template fill
 @mixin fill {
   width: 100%;
   height: 100%;
 }
 
+// template container
 @mixin container($maxW: 1200px, $h: 100vh, $p: 5vmax, $m: auto) {
   margin: $m;
   max-width: $maxW;
@@ -52,6 +61,7 @@ $shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   padding: $p;
 }
 
+// template myButton
 @mixin myButton($w: 10rem, $p: 0.5rem, $bgColor: $color3, $color: $color2) {
   width: $w;
   padding: calc($p * 1) calc($p * 3);
@@ -72,12 +82,14 @@ $shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
 }
 
+// template hidescrollbar
 @mixin hidescrollbar {
   &::-webkit-scrollbar {
     display: none;
   }
 }
 
+// template grid
 @mixin grid(
   $column: 1fr 2fr,
   $alignItems: center,
@@ -89,6 +101,7 @@ $shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   justify-items: $justifyContent;
 }
 
+//template inputs
 @mixin inputs {
   input {
     width: 100%;

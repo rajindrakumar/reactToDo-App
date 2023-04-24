@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { Context, server } from "../main";
 
 const Header = () => {
+
+  //passing the contex
   const { isAuthenticated, setIsAuthenticated, loading, setLoading } =
     useContext(Context);
 
@@ -27,10 +29,15 @@ const Header = () => {
 
   return (
     <nav className="header">
+      {/* this is todo app text as logo */}
       <div>
         <h2>Todo App.</h2>
       </div>
+      
+      {/* linking the home, profile,logout tag */}
       <article>
+
+        {/* instead of anchor tag , we use link tag to not refresh */}
         <Link to={"/"}>Home</Link>
         <Link to={"/profile"}>Profile</Link>
         {isAuthenticated ? (

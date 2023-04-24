@@ -1,5 +1,9 @@
+// This is the main css file 
+
+//importing the google font
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,300&display=swap");
 
+// this is the universal styles 
 * {
   margin: 0%;
   padding: 0%;
@@ -8,16 +12,19 @@
   font-family: "Roboto", sans-serif;
 }
 
+// importing all the styles files
 @import "features";
 @import "header";
 @import "login";
 @import "mediaquery";
 
+//this is the styles of anchor tag
 a {
   text-decoration: none;
   color: $color3;
 }
 
+// style of home 
 .home {
   text-align: center;
   .heading {
@@ -30,12 +37,15 @@ a {
     font-weight: 900;
   }
 }
+
+//styling og todo container
 .todosContainer {
   @include flexBox(column, center, flex-start);
   @include fill;
   @include container(900px, unset, 3rem 0);
 }
 
+//styles of todo - todoitem.jsx 
 .todo {
   background-color: $color2;
   border-radius: 5px;
@@ -53,6 +63,7 @@ a {
   }
 }
 
+//styles of loader.jsx
 .loader {
   @include defaultStyle;
   @include flexBox(column, center, center);

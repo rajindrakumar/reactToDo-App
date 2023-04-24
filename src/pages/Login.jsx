@@ -1,3 +1,4 @@
+//importing all the library needed here
 import axios from "axios";
 import React, { useContext, useState } from "react";
 import { toast } from "react-hot-toast";
@@ -41,6 +42,7 @@ const Login = () => {
 
   if (isAuthenticated) return <Navigate to={"/"} />;
 
+  //creating login page or linking register page
   return (
     <div className="login">
       <section>
@@ -62,6 +64,8 @@ const Login = () => {
           <button disabled={loading} type="submit">
             Login
           </button>
+
+          {/* linking the register page here  */}
           <h4>Or</h4>
           <Link to="/register">Sign Up</Link>
         </form>

@@ -1,3 +1,6 @@
+//this is the main files to render all the page
+
+//importing all the libraray(react-router-dom,react,axios,react-router-toast) and pages into this file 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
@@ -29,10 +32,11 @@ function App() {
         setLoading(false);
       });
   }, []);
-
+  
+  //rendering all the pages 
   return (
     <Router>
-      <Header />
+      <Header />  
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
